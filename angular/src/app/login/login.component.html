@@ -1,0 +1,110 @@
+
+<br><br><br>
+<div *ngIf="login" class="container" >
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="account-wall">
+                <!--<img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"-->
+                    <!--alt="">-->
+                   <form #userform2="ngForm" class="form-group" (ngSubmit)="Login(userform2)">
+  <div class="col-xs-10">
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" #Name='ngModel' class="form-control" name="name" [(ngModel)]="name" title="Minimum 3 character maximum 5 character"      placeholder="Enter Name" required>
+    </div>	
+
+
+
+
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" #Password='ngModel' class="form-control" name="password" title="Minimum 3 character maximum 5 character" [(ngModel)]="password" placeholder="Enter description" required>
+    </div>
+
+     
+
+    
+
+
+    <div>
+<p align="right">
+      <button align="center" class="btn btn-lg btn-primary btn-block"  name="button" >Login</button><br>
+      <button align="center" class="btn btn-lg btn-primary btn-block"  name="button" (click)="Register()" >Register</button><br><br><br><br>
+      
+</p>
+    </div>
+  </div>
+  </form>
+            
+    </div>
+</div>
+ </div>
+</div>
+
+<div *ngIf="register"   class="container" >>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="account-wall">
+                <!--<img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                    alt="">-->
+
+                    <form #userform1="ngForm" class="form-group" (ngSubmit)="OnRegister(userform1)">
+  <div class="col-xs-10">
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" #Name='ngModel' class="form-control" name="name" [(ngModel)]="name" title="Minimum 3 character maximum 5 character"      placeholder="Enter Name" required>
+    </div>	
+
+
+
+
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" #Password='ngModel' class="form-control" name="password" title="Minimum 3 character maximum 5 character" [(ngModel)]="password" placeholder="Enter description" required>
+    </div>
+
+     <div class="form-group">
+      <label>Email</label>
+      <input type="email" #Created='ngModel' class="form-control" name="email" title="Minimum 3 character maximum 5 character" [(ngModel)]="email" placeholder="Enter Created by" required>
+    </div>
+
+    
+
+
+    <div>
+<p align="right">
+      <button align="center" class="btn btn-lg btn-primary btn-block"  name="button" >Register</button><br><br><br><br>
+</p>
+    </div>
+  </div>
+  </form>
+
+                <!--<form #userform1="ngForm" class="form-signin"  (ngSubmit)="OnRegister(userform1)">
+                <input type="text" #name='ngModel' [(ngModel)]="name" name="name" class="form-control" placeholder="Name" required autofocus><br>
+                <input type="password" #Password='ngModel' [(ngModel)]="password" name="password" class="form-control" placeholder="Password" required><br>
+                <input type="email" #Email='ngModel' [(ngModel)]="email"  class="form-control" name="email" placeholder="Email" required><br>
+                <button class="btn btn-lg btn-primary btn-block" type="submit"   >
+                    Register</button>
+                
+                </form>-->
+            
+    </div>
+</div>
+
+
+ </div>
+</div>
+
+
+<div *ngIf="midPage" class="container">
+    <p>Go to your email id and click the activation link</p><br>
+    <a href="#">Go to login page</a>
+</div>
+
+<div *ngIf="loginPage" class="container">
+    <h1>WELCOME {{user}}</h1>
+</div>
